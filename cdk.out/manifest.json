@@ -1,0 +1,223 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "GocdkStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "GocdkStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "GocdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "GocdkStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0e89bb042262da10f685cc3a669dbfade11679277c6f485ddc42132147973ce1.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "GocdkStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "GocdkStack.assets"
+      ],
+      "metadata": {
+        "/GocdkStack/myUserTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "myUserTable73C6AE52"
+            }
+          }
+        ],
+        "/GocdkStack/myUserTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myUserTable73C6AE52"
+          }
+        ],
+        "/GocdkStack/MyLambdaFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunctionServiceRole313A4D46"
+          }
+        ],
+        "/GocdkStack/MyLambdaFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunctionServiceRoleDefaultPolicy23555F9E"
+          }
+        ],
+        "/GocdkStack/MyLambdaFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaFunction67CCA873"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGateway46A8110D"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayDeployment55C77565eebe181fdcf79ac7ed8cd69520a4951d"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayDeploymentStageprodE7F94E71"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayEndpoint1DD0FB9A"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayOPTIONS93A85446"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/register/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayregisterC0B5C261"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/register/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayregisterOPTIONSBC211765"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/register/POST/ApiPermission.GocdkStackmyAPIGateway61A6430E.POST..register": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayregisterPOSTApiPermissionGocdkStackmyAPIGateway61A6430EPOSTregisterDC517B90"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/register/POST/ApiPermission.Test.GocdkStackmyAPIGateway61A6430E.POST..register": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayregisterPOSTApiPermissionTestGocdkStackmyAPIGateway61A6430EPOSTregisterDDADB621"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/register/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayregisterPOST3F10DC69"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/login/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayloginE27A638F"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/login/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayloginOPTIONS6586D1B1"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/login/POST/ApiPermission.GocdkStackmyAPIGateway61A6430E.POST..login": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayloginPOSTApiPermissionGocdkStackmyAPIGateway61A6430EPOSTloginA8FBECC0"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/login/POST/ApiPermission.Test.GocdkStackmyAPIGateway61A6430E.POST..login": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayloginPOSTApiPermissionTestGocdkStackmyAPIGateway61A6430EPOSTloginDF2E64F6"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/login/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayloginPOST63694C10"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/protected/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayprotectedFD9634AC"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/protected/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayprotectedOPTIONSFBA2AFA6"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/protected/GET/ApiPermission.GocdkStackmyAPIGateway61A6430E.GET..protected": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayprotectedGETApiPermissionGocdkStackmyAPIGateway61A6430EGETprotected8775D9C6"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/protected/GET/ApiPermission.Test.GocdkStackmyAPIGateway61A6430E.GET..protected": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayprotectedGETApiPermissionTestGocdkStackmyAPIGateway61A6430EGETprotectedEC0FD117"
+          }
+        ],
+        "/GocdkStack/myAPIGateway/Default/protected/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myAPIGatewayprotectedGETF1006873"
+          }
+        ],
+        "/GocdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/GocdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/GocdkStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/GocdkStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "GocdkStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
